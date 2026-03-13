@@ -191,7 +191,7 @@ Testing is central to this project.
 - [ ] Add authentication / authorization
 - [ ] Add book return endpoint
 - [ ] Add overdue notifications
-- [ ] Add CI/CD pipeline and build badge
+- [x] Add CI/CD pipeline and build badge
 
 
 ## 🤝 Contributing
