@@ -44,11 +44,9 @@ jobs:
     - name: Build
       run: dotnet build --no-restore --configuration Release
 
-    # Utilisation du collector Coverlet (XPlat Code Coverage)
+    # Use the Coverlet collector (XPlat Code Coverage)
     - name: Run tests with coverage
-      run: dotnet test --no-build --configuration Release --verbosity normal \
-           --collect:"XPlat Code Coverage" \
-           --results-directory coverage
+      run: dotnet test --no-build --configuration Release --verbosity normal --collect:"XPlat Code Coverage" --results-directory coverage
 
     - name: Upload coverage report
       uses: actions/upload-artifact@v4
