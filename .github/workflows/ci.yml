@@ -44,17 +44,25 @@ jobs:
     - name: Build
       run: dotnet build --no-restore --configuration Release
 
+    # FIX: create coverage directory before running tests
+    - name: Create coverage directory
+      run: mkdir -p coverage
+
+    # FIX: use absolute path for CoverletOutput (required for .NET 10)
     - name: Run tests with coverage
-      run: dotnet test --no-build --configuration Release --verbosity normal /p:CollectCoverage=true /p:CoverletOutput=coverage/ /p:CoverletOutputFormat=cobertura
+      run: dotnet test --no-build --configuration Release --verbosity normal \
+           /p:CollectCoverage=true \
+           /p:CoverletOutput=$(pwd)/coverage/ \
+           /p:CoverletOutputFormat=cobertura
 
     - name: Upload coverage report
       uses: actions/upload-artifact@v4
       with:
         name: coverage-report
-        path: "**/coverage/coverage.cobertura.xml"
+        path: "coverage/coverage.cobertura.xml"
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v4
       with:
-        files: "**/coverage/coverage.cobertura.xml"
+        files: "coverage/coverage.cobertura.xml"
         token: ${{ secrets.CODECOV_TOKEN || '' }}
