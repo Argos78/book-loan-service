@@ -1,0 +1,17 @@
+﻿global using FluentResults;
+global using FluentValidation;
+global using FluentValidation.AspNetCore;
+global using BookLoanService.Application;
+global using BookLoanService.Application.Commands;
+global using BookLoanService.Application.Errors;
+global using BookLoanService.Application.Interfaces;
+global using BookLoanService.Infrastructure;
+global using BookLoanService.WebApi;
+global using BookLoanService.WebApi.Errors;
+global using BookLoanService.WebApi.Mappings;
+global using BookLoanService.WebApi.Models;
+global using BookLoanService.WebApi.Responses;
+global using BookLoanService.WebApi.Validation;
+global using BookLoanService.WebApi.Validators;
+global using Microsoft.AspNetCore.Diagnostics;
+global using Microsoft.AspNetCore.Mvc;

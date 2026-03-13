@@ -1,0 +1,14 @@
+﻿global using FluentResults;
+global using BookLoanService.Application.Commands;
+global using BookLoanService.Application.Errors;
+global using BookLoanService.Application.Interfaces;
+global using BookLoanService.Application.Mappings;
+global using BookLoanService.Application.Models;
+global using BookLoanService.Application.Results;
+global using BookLoanService.Application.Services;
+global using BookLoanService.Domain.Entities;
+global using BookLoanService.Domain.Enums;
+global using BookLoanService.Domain.Errors;
+global using BookLoanService.Domain.Interfaces;
+global using BookLoanService.Domain.Policies;
+global using Microsoft.Extensions.DependencyInjection;
