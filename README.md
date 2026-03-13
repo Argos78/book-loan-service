@@ -1,6 +1,7 @@
 # 📚 Book Loan Service
 
 ![CI](https://github.com/Argos78/book-loan-service/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/gh/Argos78/book-loan-service/branch/main/graph/badge.svg)](https://codecov.io/gh/Argos78/book-loan-service)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 A lightweight, domain‑driven service that manages book borrowing operations through a clean and extensible API.
